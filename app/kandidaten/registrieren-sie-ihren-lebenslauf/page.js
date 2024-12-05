@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { Container, Typography, Box, IconButton, Avatar } from '@mui/material';
+import { Container, Typography, Box, IconButton, Avatar } from '@mui/material'; 
 import { CloudUpload, Delete } from '@mui/icons-material';
 import { useDropzone } from 'react-dropzone';
 import { useAppState } from "../../hooks/useAppState";
