@@ -106,8 +106,8 @@ const handleSubmit = async (e) => {
     const data = await response.json();
     if (response.ok) {
         alert('Correo enviado correctamente');
-        setEmail('');
-        setFormValues({
+        setFormValues(prev => ({
+          ...prev,
           vorname: '',
           nachname: '',
           telefon: '',
@@ -119,13 +119,13 @@ const handleSubmit = async (e) => {
           akzeptiereKommerzielleInfos: false,
           akzeptiereDatenschutz: false,
           cv: null
-        });
+        }));
     } else {
       alert(data.error || 'Failed to send email.');
     }
   } catch (error) {
     // alert('Failed to send email.');
-    console.log("ASDQWE","XD");
+    console.log(error);
   }
 };
 
