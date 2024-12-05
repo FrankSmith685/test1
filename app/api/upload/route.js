@@ -6,7 +6,8 @@ import { mkdir } from 'fs/promises';
 import fs from 'fs';
 
 // Configura Multer para guardar archivos en `public/uploads`
-const uploadDir = resolve('./uploads');
+const uploadDir = resolve('/tmp/uploads');
+
 const storage = multer.diskStorage({
   destination: async (req, file, cb) => {
     await mkdir(uploadDir, { recursive: true }); // Crea la carpeta si no existe

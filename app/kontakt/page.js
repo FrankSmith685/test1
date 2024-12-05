@@ -124,7 +124,8 @@ const handleSubmit = async (e) => {
       alert(data.error || 'Failed to send email.');
     }
   } catch (error) {
-    alert('Failed to send email.');
+    // alert('Failed to send email.');
+    console.log("ASDQWE","XD");
   }
 };
 
