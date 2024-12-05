@@ -4,7 +4,7 @@ import { useAppState } from "../../hooks/useAppState";
 import de from "../../languaje/de";
 import es from "../../languaje/es";
 import en from "../../languaje/en";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const images = ["v1720616614/cebiafyysmleabgeofvi.jpg","v1720622228/omcgfbrslqda69acfxr0.jpg"];
 
