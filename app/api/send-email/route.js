@@ -3,12 +3,16 @@ import fs from 'fs';
 import path from 'path';
 
 // Ruta de la carpeta donde se guardan los archivos
-const uploadsDir = path.resolve('uploads');
+const uploadsDir = path.join('/tmp', 'uploads');
 
 export async function POST(req) {
   try {
+    if (!fs.existsSync(uploadsDir)) {
+      fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+    const files = fs.existsSync(uploadsDir) ? fs.readdirSync(uploadsDir) : [];
     // Verificar si existen archivos en la carpeta
-    const files = fs.readdirSync(uploadsDir);
+    // const files = fs.readdirSync(uploadsDir);
     const { 
       email, 
       vorname,
