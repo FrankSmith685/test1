@@ -29,6 +29,9 @@ const PrivacyPolicy = () => {
             <p className="mb-6 text-lg leading-relaxed">
                 {data.description1}
             </p>
+            <p className="mb-6 text-lg leading-relaxed">
+                {data.infor4.description1}
+            </p>
 
             <div className="bg-gray-100 p-6 rounded-md shadow-inner mb-6">
                 <h2 className="text-2xl font-semibold mb-4 text-blue-700">{data.infos1.title}</h2>
@@ -49,12 +52,12 @@ const PrivacyPolicy = () => {
                 </ul>
             </div>
 
-            <div className="bg-gray-100 p-6 rounded-md shadow-inner">
+            {/* <div className="bg-gray-100 p-6 rounded-md shadow-inner">
                 <h2 className="text-2xl font-semibold mb-4 text-blue-700">{data.infos3.title}</h2>
                 <p className="text-lg leading-relaxed">
                     {data.infos2.description1}
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 };

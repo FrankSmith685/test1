@@ -93,7 +93,7 @@ const de = {
             {detail:"Adresse: Brunnenstraße, Neuweiler. Deutschland"},
             {detail:"Öffnungszeiten: Mo-Fr, 9:00 - 18:00 Uhr"},
         ]},
-        info:"2024 Alle Rechte vorbehalten"
+        info:"2025 Alle Rechte vorbehalten"
     },
     Unternehmen:{
         PersonalauswahlUndRekrutierung:{
@@ -261,7 +261,7 @@ const de = {
         description2:"Weitere Einzelheiten finden Sie in unserer vollständigen Datenschutzrichtlinie auf unserer Webseite.",
         tem1:"Rechtlicher Hinweis",
         tem1info1:"1. Allgemeine Informationen",
-        tem1info2:"Diese rechtlichen Hinweise regeln die Nutzung der Website [Name der Website], die Eigentum von Sandra Roggero M. Beratung ist:",
+        tem1info2:"Diese rechtlichen Hinweise regeln die Nutzung der Website Sandra Roggero M. Beratung, die Eigentum von Sandra Roggero M. Beratung ist:",
         infoContacts:{
             info1:"Firmenname:",
             info2:"Adresse:",
@@ -283,7 +283,7 @@ const de = {
         tema7info1:"7. Änderungen des rechtlichen Hinweises",
         tema7info2:"Sandra Roggero M. Beratung behält sich das Recht vor, diese Hinweise jederzeit zu ändern. Die Änderungen werden mit der Veröffentlichung auf der Website wirksam. Wir empfehlen Ihnen, diese rechtlichen Hinweise regelmäßig zu überprüfen, um sich über etwaige Änderungen zu informieren.",
         tema8info1:"8. Anwendbares Recht und Gerichtsbarkeit",
-        tema8info2:"Dieser rechtliche Hinweis unterliegt dem deutschen Recht. Für alle Streitigkeiten, die im Zusammenhang mit dieser Website entstehen, sind ausschließlich die Gerichte von [Stadt/Region] zuständig.",
+        tema8info2:"Dieser rechtliche Hinweis unterliegt dem deutschen Recht. Für alle Streitigkeiten, die im Zusammenhang mit dieser Website entstehen, sind ausschließlich die Gerichte von Saarland zuständig.",
         tema9info1:"9. Kontakt",
         tema9infos:{
             info1:"Name Ihres Unternehmens:",
@@ -311,6 +311,9 @@ const de = {
         infos3:{
             title:"Zum Schutz Ihrer Daten",
             description1:"Ihre Angaben werden sicher an unsere E-Mail-Adresse gesendet und nicht in einer Datenbank gespeichert. Wir ergreifen alle angemessenen Maßnahmen, um Ihre Daten vor unbefugtem Zugriff zu schützen."
+        },
+        infor4:{
+            description1:"Weitergabe: Ihre Daten werden nicht an Dritte weitergegeben, außer wenn dies gesetzlich erforderlich ist. Datensicherheit: Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen. Ihre Rechte: Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch bezüglich Ihrer Daten. Kontakt: Bei Fragen kontaktieren Sie uns unter kontakt@roggero-beratung.de"
         }
     }
 }

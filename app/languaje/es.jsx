@@ -91,7 +91,7 @@ const es = {
             {detail:"Dirección: Brunnenstrasse, Neuweiler. Alemania"},
             {detail:"Horario: Lun-Vie, 9:00 - 18:00"},
         ]},
-        info:"2024 Todos los derechos reservados"
+        info:"2025 Todos los derechos reservados"
     },
     
     Unternehmen:{
@@ -260,7 +260,7 @@ const es = {
         description2:"Para más detalles, consulte nuestra política de privacidad completa en nuestro sitio web.",
         tem1:"Aviso legal",
         tem1info1:"1. Información general",
-        tem1info2:"Estos avisos legales regulan el uso del sitio web [Nombre del sitio web], que es propiedad de Sandra Roggero M. Beratung:",
+        tem1info2:"Estos avisos legales regulan el uso del sitio web Sandra Roggero M. Beratung, que es propiedad de Sandra Roggero M. Beratung:",
         infoContacts:{
             info1:"Nombre de la empresa:",
             info2:"Dirección:",
@@ -282,7 +282,7 @@ const es = {
         tema7info1:"7. Modificaciones del aviso legal",
         tema7info2:"Sandra Roggero M. Beratung se reserva el derecho de modificar estos avisos en cualquier momento. Las modificaciones entrarán en vigor al publicarse en el sitio web. Le recomendamos revisar estos avisos legales regularmente para estar informado de cualquier cambio.",
         tema8info1:"8. Ley aplicable y jurisdicción",
-        tema8info2:"Este aviso legal se rige por la ley alemana. Para todas las disputas que surjan en relación con este sitio web, serán competentes exclusivamente los tribunales de [Ciudad/Región].",
+        tema8info2:"Este aviso legal se rige por la ley alemana. Para todas las disputas que surjan en relación con este sitio web, serán competentes exclusivamente los tribunales de Saarland.",
         tema9info1:"9. Contacto",
         tema9infos:{
             info1:"Nombre de su empresa:",
@@ -311,6 +311,9 @@ const es = {
         infos3:{
             title:"Para Proteger Sus Datos",
             description1:"Sus datos se envían de manera segura a nuestra dirección de correo electrónico y no se almacenan en una base de datos. Tomamos todas las medidas razonables para proteger sus datos contra el acceso no autorizado."
+        },
+        infor4:{
+            description1:"Weitergabe: Ihre Daten werden nicht an Dritte weitergegeben, außer wenn dies gesetzlich erforderlich ist. Datensicherheit: Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen. Ihre Rechte: Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Widerspruch bezüglich Ihrer Daten. Kontakt: Bei Fragen kontaktieren Sie uns unter kontakt@roggero-beratung.de"
         }
     }
 
