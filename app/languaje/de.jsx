@@ -283,7 +283,7 @@ const de = {
         tema7info1:"7. Änderungen des rechtlichen Hinweises",
         tema7info2:"Sandra Roggero M. Beratung behält sich das Recht vor, diese Hinweise jederzeit zu ändern. Die Änderungen werden mit der Veröffentlichung auf der Website wirksam. Wir empfehlen Ihnen, diese rechtlichen Hinweise regelmäßig zu überprüfen, um sich über etwaige Änderungen zu informieren.",
         tema8info1:"8. Anwendbares Recht und Gerichtsbarkeit",
-        tema8info2:"Dieser rechtliche Hinweis unterliegt dem deutschen Recht. Für alle Streitigkeiten, die im Zusammenhang mit dieser Website entstehen, sind ausschließlich die Gerichte von Saarland zuständig.",
+        tema8info2:"Dieser rechtliche Hinweis unterliegt dem deutschen Recht. Für alle Streitigkeiten, die im Zusammenhang mit dieser Website entstehen, ist der Gerichtsstand Saarbrücken.",
         tema9info1:"9. Kontakt",
         tema9infos:{
             info1:"Name Ihres Unternehmens:",

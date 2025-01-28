@@ -282,7 +282,7 @@ const es = {
         tema7info1:"7. Modificaciones del aviso legal",
         tema7info2:"Sandra Roggero M. Beratung se reserva el derecho de modificar estos avisos en cualquier momento. Las modificaciones entrarán en vigor al publicarse en el sitio web. Le recomendamos revisar estos avisos legales regularmente para estar informado de cualquier cambio.",
         tema8info1:"8. Ley aplicable y jurisdicción",
-        tema8info2:"Este aviso legal se rige por la ley alemana. Para todas las disputas que surjan en relación con este sitio web, serán competentes exclusivamente los tribunales de Saarland.",
+        tema8info2:"Este aviso legal se rige por la ley alemana. Para todas las disputas que surjan en relación con este sitio web, el lugar de jurisdicción es Saarbrücken.",
         tema9info1:"9. Contacto",
         tema9infos:{
             info1:"Nombre de su empresa:",

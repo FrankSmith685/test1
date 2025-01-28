@@ -279,7 +279,7 @@ const en = {
         tema7info1:"7. Changes to the Legal Notice",
         tema7info2:"Sandra Roggero M. Beratung reserves the right to modify these notices at any time. Changes will take effect upon publication on the website. We recommend that you regularly review these legal notices to stay informed of any changes.",
         tema8info1:"8. Applicable Law and Jurisdiction",
-        tema8info2:"This legal notice is governed by German law. For all disputes arising in connection with this website, the courts of Saarland shall have exclusive jurisdiction.",
+        tema8info2:"This legal notice is governed by German law. For all disputes arising in connection with this website, the place of jurisdiction is Saarbrücken.",
         tema9info1:"9. Contact",
         tema9infos:{
             info1:"Your Company Name:",
