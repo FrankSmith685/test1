@@ -77,7 +77,7 @@ const de = {
         
     },
     footer:{
-        Informationen:{title:"Informationen",links:[
+        Informationen:{title:"Impressum",links:[
             {link:"/benutzerrechte",detail:"Benutzerrechte"},
             {link:"/datenschutzrichtlinie",detail:"Datenschutzrichtlinie"},
         ]},
@@ -290,7 +290,44 @@ const de = {
             info2:"Adresse:",
             info3:"E-Mail Adresse:",
             info4:"Telefon:"
-        }
+        },
+        "Impressum": {
+            "title": "Impressum",
+            "anbieter": {
+                "name": "Sandra Roggero",
+                "unternehmen": "Sandra Roggero M. Beratung",
+                "adresse": "Brunnenstraße 84, 66280 Sulzbach Neuweiler, Deutschland",
+                "telefon": "+49 15902234045",
+                "email": "kontakt@roggero-beratung.de",
+                "steuerNummer": "040/263/01462",
+                "berufsbezeichnung": "Berater und Trainer",
+                "verleihungsstaat": "Deutschland"
+            },
+            "kammer": {
+                "name": "IHK des Saarlandes",
+                "adresse": "Franz-Josef-Röder-Straße 9, 66119 Saarbrücken",
+                "webseite": "https://www.saarland.ihk.de/"
+            },
+            "aufsichtsbehörde": {
+                "name": "Amtsgericht Saarbrücken",
+                "adresse": "Franz-Josef-Röder-Straße 13, 66119 Saarbrücken",
+                "webseite": "https://www.ag-sb.saarland.de"
+            },
+            "datenschutz": {
+                "verantwortlicher": "Sandra Roggero",
+                "email": "kontakt@roggero-beratung.de",
+                "telefon": "+49 15902234045"
+            },
+            "links": {
+                "impressum": "https://www.roggero-beratung.de/impressum/",
+                "agb": "https://www.roggero-beratung.de/agb/"
+            },
+            "bildernachweis": {
+                "beschreibung": "Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.",
+                "rechteinhaber": "Sandra Roggero"
+            },
+            "texte": "Alle Texte sind urheberrechtlich geschützt."
+        },
     },
     Datenschutzrichtlinie:{
         title:"Datenschutzrichtlinie",

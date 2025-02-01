@@ -11,91 +11,53 @@ const Benutzerrechte = () => {
     }, []);
 
     const {tipoIdioma} = useAppState();
-    const [data,setData] = useState(de.Benutzerrechte);
+    const [data,setData] = useState(de.Benutzerrechte.Impressum);
 
     useEffect(()=>{
         if(tipoIdioma==='de'){
-            setData(de.Benutzerrechte);
+            setData(de.Benutzerrechte.Impressum);
         }else if(tipoIdioma==='en'){
-            setData(en.Benutzerrechte);
+            setData(en.Benutzerrechte.Impressum);
         }else{
-            setData(es.Benutzerrechte);
+            setData(es.Benutzerrechte.Impressum);
         }
     },[tipoIdioma]);
 
     return (
-        <div className="p-8 bg-white text-gray-900 mt-32 max-w-4xl mx-auto ">
+        <div className="p-8 bg-white text-gray-900 mt-32 max-w-4xl mx-auto">
             <h1 className="text-3xl font-extrabold mb-6 text-center text-violet-900 font-bell">{data.title}</h1>
-            <p className="mb-6 text-lg leading-relaxed">
-                {data.description1}
-            </p>
+            
             <address className="mb-6 text-lg leading-relaxed">
-                <strong>{data.infos.info1}</strong> <span>Sandra Roggero M. Beratung</span><br />
-                <strong>{data.infos.info2}</strong> <span>Brunnenstraße, Neuweiler. Deutschland</span><br />
-                <strong>{data.infos.info3}</strong> <a href="mailto:[E-Mail Adresse]" className="text-blue-600">kontakt@roggero-beratung.de</a><br />
-                <strong>{data.infos.info4}</strong> <a href="tel:[Telefon]" className="text-blue-600">+49 15902234045</a><br />
+                <strong>Name:</strong> {data.anbieter.name}<br />
+                <strong>Unternehmen:</strong> {data.anbieter.unternehmen}<br />
+                <strong>Adresse:</strong> {data.anbieter.adresse}<br />
+                <strong>Telefon:</strong> <a href={`tel:${data.anbieter.telefon}`} className="text-blue-600">{data.anbieter.telefon}</a><br />
+                <strong>Email:</strong> <a href={`mailto:${data.anbieter.email}`} className="text-blue-600">{data.anbieter.email}</a><br />
+                <strong>Steuer Nummer:</strong> {data.anbieter.steuerNummer}<br />
+                <strong>Berufsbezeichnung:</strong> {data.anbieter.berufsbezeichnung}<br />
+                <strong>Verleihungsstaat:</strong> {data.anbieter.verleihungsstaat}
             </address>
-            <p className="mb-6 text-lg leading-relaxed">
-                {data.description2}
-            </p>
+            
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Kammer</h2>
+            <p className="mb-4 text-lg leading-relaxed">{data.kammer.name}, {data.kammer.adresse}, <a href={data.kammer.webseite} className="text-blue-600">Website</a></p>
 
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold mb-4 text-blue-700">{data.tem1}</h2>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tem1info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tem1info2}
-                </p>
-                <address className="mb-4 text-lg leading-relaxed">
-                    <strong>{data.infoContacts.info1}</strong> Sandra Roggero M. Beratung<br />
-                    <strong>{data.infoContacts.info2}</strong> <span>Brunnenstraße, Neuweiler. Deutschland</span><br />
-                    <strong>{data.infoContacts.info3}</strong> <a href="mailto:kontakt@roggero-beratung.de" className="text-blue-600">kontakt@roggero-beratung.de</a><br />
-                    <strong>{data.infoContacts.info4}</strong> <a href="tel:+49 15902234045" className="text-blue-600">+49 15902234045</a><br />
-                    <strong>{data.infoContacts.info6}</strong> <span>040/263/01462</span>
-                </address>
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Aufsichtsbehörde</h2>
+            <p className="mb-4 text-lg leading-relaxed">{data.aufsichtsbehörde.name}, {data.aufsichtsbehörde.adresse}, <a href={data.aufsichtsbehörde.webseite} className="text-blue-600">Website</a></p>
+            
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Datenschutz</h2>
+            <p className="mb-4 text-lg leading-relaxed">Verantwortlicher: {data.datenschutz.verantwortlicher}, <a href={`mailto:${data.datenschutz.email}`} className="text-blue-600">{data.datenschutz.email}</a>, <a href={`tel:${data.datenschutz.telefon}`} className="text-blue-600">{data.datenschutz.telefon}</a></p>
+            
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Links</h2>
+            <ul className="list-disc list-inside mb-4 text-lg leading-relaxed">
+                <li><a href={data.links.impressum} className="text-blue-600">Impressum</a></li>
+                <li><a href={data.links.agb} className="text-blue-600">AGB</a></li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Bildernachweis</h2>
+            <p className="mb-4 text-lg leading-relaxed">{data.bildernachweis.beschreibung} ({data.bildernachweis.rechteinhaber})</p>
 
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema2info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                    {data.tema2info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema3info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tema3info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema4info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                    {data.tema4info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema5info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tema5info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema6info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tema6info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema7info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tema7info2}
-                </p>
-
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema8info1}</h3>
-                <p className="mb-4 text-lg leading-relaxed">
-                {data.tema8info2}
-                </p>
-
-                {/* <h3 className="text-xl font-semibold mb-2 text-gray-800">{data.tema9info1}</h3>
-                <address className="text-lg leading-relaxed">
-                    <strong>{data.tema9infos.info1}</strong> <span>[Name Ihres Unternehmens]</span><br />
-                    <strong>{data.tema9infos.info2}</strong> <span>[Adresse]</span><br />
-                    <strong>{data.tema9infos.info3}</strong> <a href="mailto:[E-Mail Adresse]" className="text-blue-600">[E-Mail Adresse]</a><br />
-                    <strong>{data.tema9infos.info4}</strong> <a href="tel:[Telefon]" className="text-blue-600">[Telefon]</a><br />
-                </address> */}
-            </div>
+            <h2 className="text-2xl font-bold mb-4 text-blue-700">Texte</h2>
+            <p className="mb-4 text-lg leading-relaxed">{data.texte}</p>
         </div>
     );
 };
