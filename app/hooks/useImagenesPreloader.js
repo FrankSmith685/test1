@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
-import LogoPrincipalWhite from "../../imagenes/LogoPrincipalWhite.png";
-import LogoPrincipalBlack from "../../imagenes/LogoPrincipalBlack.png";
-import Foto_Principal from "../../imagenes/Foto_Principal.jpg";
+import LogoPrincipalWhite from "../imagenes/LogoPrincipalWhite.png";
+import LogoPrincipalBlack from "../imagenes/LogoPrincipalBlack.png";
+import Foto_Principal from "../imagenes/Foto_Principal.jpg";
 // import Innovation from "@/imagenes/Innovation.png";
 // import Recruiting from "@/imagenes/Recruiting.png";
 // import Vision from "@/imagenes/Vision.png";

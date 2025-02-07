@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppState } from "./useAppState";
 
-const bannerVideoUrl = new URL("../../videos/banner.mp4", import.meta.url).href;
+const bannerVideoUrl = new URL("../videos/banner.mp4", import.meta.url).href;
 
 export default function InitVideos() {
   const { videos, setVideos } = useAppState();
