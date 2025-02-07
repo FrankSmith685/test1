@@ -160,7 +160,7 @@ const HeaderNav = () => {
                             {isNavHovered ? (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={imagenRef?.current.LogoPrincipalBlack?.src} alt="Logo Principal" className='h-20' loading='lazy'/>
+                                        <img src={imagenRef?.current.LogoPrincipalBlack} alt="Logo Principal" className='h-20' loading='lazy'/>
                                         <div className="flex flex-col items-center w-auto">
                                             <h2 className={`font-roboto-thin w-auto font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.
@@ -174,7 +174,7 @@ const HeaderNav = () => {
                             ) : (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={imagenRef?.current.LogoPrincipalWhite?.src} alt="Logo Principal" className='h-20' loading='lazy' />
+                                        <img src={imagenRef?.current.LogoPrincipalWhite} alt="Logo Principal" className='h-20' loading='lazy' />
                                         <div className="flex flex-col items-center">
                                             <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.
