@@ -8,14 +8,16 @@ export const useAppState = () => {
         setImagenesPreloader,
         setVideosPreloader,
         setActiveCarga,
-        setTipoIdioma
+        setTipoIdioma,
+        setVideos,
     } = useContext(AppContext);
 
     const {
         imagenesPreloader,
         videosPreloader,
         activeCarga,
-        tipoIdioma
+        tipoIdioma,
+        videos
     } = appState;
 
     return {
@@ -26,6 +28,8 @@ export const useAppState = () => {
         setActiveCarga,
         activeCarga,
         setTipoIdioma,
-        tipoIdioma
+        tipoIdioma,
+        setVideos,
+        videos
     };
 };

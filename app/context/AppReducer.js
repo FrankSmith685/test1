@@ -20,8 +20,13 @@ export const AppReducer = (state = {}, action) => {
             }
         case types.setTipoIdioma:
           return{
-          ...state,
-          tipoIdioma:action.payload
+            ...state,
+            tipoIdioma:action.payload
+          }
+        case types.setVideos:
+          return{
+            ...state,
+            videos:action.payload
           }
         default:
             return state;

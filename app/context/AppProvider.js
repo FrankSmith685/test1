@@ -1,6 +1,6 @@
 'use client'
 
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
 import { AppContext } from "./AppContext";
 import { AppReducer } from "./AppReducer";
 import * as actions from "../context/actions/Actions";
@@ -9,7 +9,8 @@ const INITIAL_STATE = {
     imagenesPreloader:{},
     videosPreloader:{},
     activeCarga:false,
-    tipoIdioma:'de'
+    tipoIdioma:'de',
+    videos:{}
 };
 
 export const AppProvider = ({ children }) => {
@@ -30,7 +31,14 @@ export const AppProvider = ({ children }) => {
         dispatch(actions.setTipoIdioma(value));
     }
 
+    const setVideos = (value) => {
+        dispatch(actions.setVideos(value));
+    }
+
     const [appState, dispatch] = useReducer(AppReducer, INITIAL_STATE);
+
+    const imagenRef = useRef({});
+    const videoRef = useRef({});
 
     return (
         <AppContext.Provider
@@ -39,7 +47,10 @@ export const AppProvider = ({ children }) => {
                 setImagenesPreloader,
                 setVideosPreloader,
                 setActiveCarga,
-                setTipoIdioma
+                setTipoIdioma,
+                imagenRef,
+                videoRef,
+                setVideos,
             }}
         >
             {children}

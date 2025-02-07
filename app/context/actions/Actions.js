@@ -20,3 +20,8 @@ export const setTipoIdioma = (tipoIdioma) => ({
     type:types.setTipoIdioma,
     payload: tipoIdioma
 });
+
+export const setVideos = (videos) => ({
+    type:types.setVideos,
+    payload: videos
+});

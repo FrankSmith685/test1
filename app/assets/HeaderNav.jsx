@@ -3,7 +3,7 @@
 // import { useLocation, useNavigate } from 'react-router-dom';
 import { TfiWorld } from 'react-icons/tfi';
 import { FaAngleRight, FaBars, FaTimes } from 'react-icons/fa';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import de from '../languaje/de';
 import { useAppState } from '../hooks/useAppState';
 import es from '../languaje/es';
@@ -11,6 +11,7 @@ import ReactCountryFlag from 'react-country-flag';
 import en from '../languaje/en';
 import Link from 'next/link';
 import { usePathname,useRouter } from 'next/navigation';
+import { AppContext } from '../context/AppContext';
 
 const HeaderNav = () => {
     const {tipoIdioma,setTipoIdioma} = useAppState();
@@ -144,6 +145,8 @@ const HeaderNav = () => {
         setTipoIdioma('en');
     }
 
+    const { imagenRef } = useContext(AppContext);
+
     return (
         <nav className="p-0 w-full z-50 fixed top-0">
             <div 
@@ -157,7 +160,7 @@ const HeaderNav = () => {
                             {isNavHovered ? (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={optimizedImageURL('v1719690680/yxcetofgrpqxqb7ziwnr.png')} alt="Logo Principal" className='h-20' loading='lazy'/>
+                                        <img src={imagenRef?.current.LogoPrincipalBlack?.src} alt="Logo Principal" className='h-20' loading='lazy'/>
                                         <div className="flex flex-col items-center w-auto">
                                             <h2 className={`font-roboto-thin w-auto font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.
@@ -171,7 +174,7 @@ const HeaderNav = () => {
                             ) : (
                                 <>
                                     <div className='flex flex-col items-center'>
-                                        <img src={optimizedImageURL('v1719690680/w24ybh8okav1nil30ylm.png')} alt="Logo Principal" className='h-20' loading='lazy' />
+                                        <img src={imagenRef?.current.LogoPrincipalWhite?.src} alt="Logo Principal" className='h-20' loading='lazy' />
                                         <div className="flex flex-col items-center">
                                             <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 ${isNavHovered ? 'text-gray-800' : 'text-white'}`}>
                                                 SANDRA ROGGERO M.

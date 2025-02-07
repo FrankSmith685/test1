@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, useMemo, useCallback } from "react";
+import React, { useEffect, useState, useMemo, useCallback, useContext } from "react";
 // import { useNavigate, Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { useAppState } from "./hooks/useAppState";
@@ -10,9 +10,11 @@ import MeineDienstleistungen from "./assets/MeineDienstleistungen";
 import en from "./languaje/en";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { AppContext } from "./context/AppContext";
 
 const HomePage = () => {
-  const { tipoIdioma } = useAppState();
+  const { tipoIdioma, videos } = useAppState();
+  const { imagenRef } = useContext(AppContext)
   const navigate = useRouter();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -38,10 +40,6 @@ const HomePage = () => {
     homeData.infoItems
   , [homeData]);
 
-  const optimizedImageURL = (url) => {
-    const cloudinaryBaseURL = 'https://res.cloudinary.com/dievolijo/image/upload/';
-    return `${cloudinaryBaseURL}c_scale,w_800/${url}`;
-  };
 
   const infoItems2 = useMemo(() => 
     homeData.infoItems2
@@ -83,15 +81,16 @@ const HomePage = () => {
   return (
     <>
       <div className="w-full h-screen bg-bg_favorite_1 relative overflow-hidden">
-          <img 
-            src={optimizedImageURL("v1720714061/f2thxhzee96nw41mmgs6.jpg")} 
-            className="absolute top-0 left-0 w-full h-full object-cover z-0" 
-            alt="Loading video..."
-          />
-          <video autoPlay loop muted preload="auto" className="absolute top-0 left-0 w-full h-full object-cover z-0">
-            <source src="https://res.cloudinary.com/dievolijo/video/upload/v1719429849/ml9u5molos4vnrx9zlyq.mp4" type="video/mp4" />
+          <video
+          autoPlay
+          loop
+          muted
+          preload="auto"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={videos.banner?.src} type="video/mp4" />
             Tu navegador no soporta el elemento de video.
-          </video>
+        </video>
 
         <div className="bg-bg_favorite_1 flex flex-col justify-start items-center h-full z-20 relative space-y-4 p-4  md:pt-0 sm:p-6 md:p-8">
             <div className="w-11/12 md:w-2/5 h-auto mt-40 sm:mt-24 md:mt-40 font-bell">
@@ -129,14 +128,13 @@ const HomePage = () => {
       </div>
       <div className="w-11/12 mx-auto text-gray-700 flex flex-wrap py-5 px-2 md:py-20 md:px-10">
         <div className="w-full sm:w-1/2">
-        {/* v1719431720/ljqc8ytxjnqzr9q8woqu.jpg */}
-          <img src={optimizedImageURL('v1721579797/t5lgz9dcymohq8ungzxe.jpg')} alt="not found" className="w-full h-full object-cover" loading="lazy"/>
+        <img src={imagenRef?.current.Foto_Principal?.src} alt="not found" className="w-full h-full object-cover" loading="lazy"/>
         </div>
           <div
             className="w-full sm:w-1/2 h-full p-4 md:p-20 space-y-4 sm:space-y-6 md:space-y-8"
           >
           <div className='flex flex-col items-center justify-start'>
-              <img src={optimizedImageURL('v1719690680/yxcetofgrpqxqb7ziwnr.png')} alt="Logo Principal" className='h-20' loading='lazy'/>
+            <img src={imagenRef?.current.LogoPrincipalBlack?.src} alt="Logo Principal" className='h-20' loading='lazy'/>
               <div className="flex flex-col items-center">
                   <h2 className={`font-roboto-thin font-medium text-xl transition-colors duration-300 text-gray-800`}>
                       SANDRA ROGGERO M.
@@ -171,7 +169,7 @@ const HomePage = () => {
           {infoItems2.map((item, index) => (
               <div key={index}  className="relative bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-64">
-              {item.image && <img src={item.image} alt={item.title} className="w-full h-full object-cover" loading="lazy" />}
+              <img src={index===0 ? imagenRef?.current.Innovation?.src : index===1 ? imagenRef?.current.Recruiting?.src : index===2 ? imagenRef?.current.Vision?.src : index===3 ? imagenRef?.current.Contratacion?.src : null} alt={item.title} className="w-full h-full object-cover" loading="lazy" />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
               </div>
