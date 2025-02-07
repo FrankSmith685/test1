@@ -20,8 +20,9 @@ export default function PreloadWrapper({ children }) {
       return (
         imagenRef.current?.LogoPrincipalWhite &&
         imagenRef.current?.LogoPrincipalBlack &&
-        imagenRef.current?.Foto_Principal && 
-        videos.banner?.readyState >= 3
+        imagenRef.current?.Foto_Principal 
+        // && 
+        // videos.banner?.readyState >= 3
         
       );
     };
