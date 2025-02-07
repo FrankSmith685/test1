@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
-import LogoPrincipalWhite from "../imagenes/LogoPrincipalWhite.png";
-import LogoPrincipalBlack from "../imagenes/LogoPrincipalBlack.png";
-import Foto_Principal from "../imagenes/Foto_Principal.jpg";
+// import LogoPrincipalWhite from "/imagenes/LogoPrincipalWhite.png";
+// import LogoPrincipalBlack from "/imagenes/LogoPrincipalBlack.png";
+// import Foto_Principal from "/imagenes/Foto_Principal.jpg";
 // import Innovation from "@/imagenes/Innovation.png";
 // import Recruiting from "@/imagenes/Recruiting.png";
 // import Vision from "@/imagenes/Vision.png";
@@ -20,9 +20,9 @@ export default function InitImages() {
     if (!imagenRef.current) return;
 
     if (!imagenRef.current.LogoPrincipalWhite && !imagenRef.current.LogoPrincipalBlack && !imagenRef.current.Foto_Principal) {
-      imagenRef.current.LogoPrincipalWhite = LogoPrincipalWhite;
-      imagenRef.current.LogoPrincipalBlack = LogoPrincipalBlack;
-      imagenRef.current.Foto_Principal = Foto_Principal;
+      imagenRef.current.LogoPrincipalWhite = "/imagenes/LogoPrincipalWhite.png";
+      imagenRef.current.LogoPrincipalBlack = "/imagenes/LogoPrincipalBlack.png";
+      imagenRef.current.Foto_Principal = "/imagenes/Foto_Principal.jpg";
       // imagenRef.current.Innovation = Innovation;
       // imagenRef.current.Recruiting = Recruiting;
       // imagenRef.current.Vision = Vision;

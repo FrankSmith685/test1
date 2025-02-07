@@ -1,15 +1,41 @@
+// import { useEffect } from "react";
+// import { useAppState } from "./useAppState";
+
+// const bannerVideoUrl = new URL("/videos/banner.mp4", import.meta.url).href;
+
+// export default function InitVideos() {
+//   const { videos, setVideos } = useAppState();
+
+//   useEffect(() => {
+//     const videosToLoad = [
+//       { name: "banner", src: bannerVideoUrl },
+//     ];
+
+//     videosToLoad.forEach(({ name, src }) => {
+//       if (!videos[name]) {
+//         const video = document.createElement("video");
+//         video.src = src;
+//         video.preload = "auto";
+//         video.load();
+//         setVideos({ ...videos, [name]: video });
+//       }
+//     });
+//   }, [Object.values(videos).length]);
+
+//   return null;
+// }
+
+
 import { useEffect } from "react";
 import { useAppState } from "./useAppState";
 
-const bannerVideoUrl = new URL("../videos/banner.mp4", import.meta.url).href;
+const bannerVideoUrl = "/videos/banner.mp4"; // ✅ Usa la ruta relativa desde `public/`
 
 export default function InitVideos() {
   const { videos, setVideos } = useAppState();
 
   useEffect(() => {
-    const videosToLoad = [
-      { name: "banner", src: bannerVideoUrl },
-    ];
+    const videosToLoad = [{ name: "banner", src: bannerVideoUrl }];
 
     videosToLoad.forEach(({ name, src }) => {
       if (!videos[name]) {
@@ -17,10 +43,10 @@ export default function InitVideos() {
         video.src = src;
         video.preload = "auto";
         video.load();
-        setVideos({ ...videos, [name]: video });
+        setVideos((prev) => ({ ...prev, [name]: video })); // ✅ Corrige la actualización del estado
       }
     });
-  }, [Object.values(videos).length]);
+  }, [Object.keys(videos).length]); // ✅ Corrige la dependencia del `useEffect`
 
   return null;
 }
